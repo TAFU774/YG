@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../css/download.css"/>
+	</head>
+	<body>
+		<div id="app">
+			<div class="content">
+				<h2>DOWNLOAD</h2>
+                    <a href="https://cowtransfer.com/s/fc32129a86fa42"><p class="word3">Android</p></a>
+                    <a href="https://cowtransfer.com/s/fda6e97c487944"><p class="word3">PC</p></a>
+			</div>
+			<div class="fluorescence fluorescence-filter" :style="{background:background}"></div>
+			<div class="fluorescence fluorescence-border" :style="{background:background}"></div>
+		</div>
+		<script type="text/javascript">
+			var app = new Vue({
+				el:"#app",
+				data:{
+					angle:235,
+					background:"linear-gradient(235deg,#89ff00,#060c21,#00bcd4)",
+					timer:0
+				},
+				methods:{
+					rotate(){
+						var that = this
+						if(this.timer != 0){
+							clearInterval(this.timer)
+							this.timer = 0
+						}
+						this.timer = setInterval(function(){
+							that.angle++;
+							that.background = "linear-gradient("+that.angle+"deg,#89ff00,#060c21,#00bcd4)";
+							if (that.angle == 595) {
+								that.angle = 235
+							}
+						},50)
+					}
+				},
+				mounted() {
+					this.rotate()
+				}
+			})
+		</script>
+	</body>
+</html>

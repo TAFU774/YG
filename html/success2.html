@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>success</title>
+    <style>
+        #head{
+            background-image: url("../images/success/800px-1920_1200_01.jpg");
+            width: 320px;
+            height: 200px;
+        }
+    </style>
+    <script>
+        var success2 = 1     
+        if (success2 != 1){
+            var y = localStorage.getItem(success)
+            y++
+            localStorage.setItem(success, y)   
+        }        
+        window.onload=function(){
+            alert("成就解锁"+y+"/114514");
+        }
+        </script>
+</head>
+<body>
+    <img src="../images/success/jy.jpg">
+    <div id="head"></div>
+    <a href="">萌娘百科-绚辻词</a>
+</body>
+</html>

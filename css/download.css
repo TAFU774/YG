@@ -1,0 +1,52 @@
+/* background  #130f40  boder #89ff00,#060c21,#00bcd4 */
+a{text-decoration:none}
+a:hover{text-decoration:none}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background-color: #130f40;
+}
+#app {
+	width: 300px;
+	height: 500px;
+	margin: 50px auto;
+	background-color: #130F40;
+	color: #fff;
+	text-align: center;
+	margin-top: 10%;
+	/* border: 1px solid; */
+	position: relative;
+}
+#app .content h2{
+	padding-top: 50px;
+}
+#app .fluorescence{
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	background: linear-gradient(235deg,#89ff00,#060c21,#00bcd4);
+}
+#app .fluorescence-filter{
+	z-index: -1;
+}
+#app .fluorescence-border{
+	z-index: -2;
+	filter: blur(40px);
+}
+  .word3{
+	color: white;
+	font-family:'Arial Narrow Bold', sans-serif;
+	font-size: 20px;
+	line-height: 130px;
+  }
+  .word3:hover{
+	color: rgb(80, 255, 246);
+	font-family:'Arial Narrow Bold', sans-serif;
+	font-size: 20px;
+	line-height: 130px;
+  }
